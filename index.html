@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <section id="card-image">
+          <div class="card-display">
+            <img
+              class="bg-card-back"
+              src="images/bg-card-back.png"
+              alt="bg-card-back"
+            />
+            <img
+              class="bg-card-front"
+              src="images/bg-card-front.png"
+              alt="bg-card-front"
+            />
+            <img
+              class="card-logo"
+              src="/images/card-logo.svg"
+              alt="card-logo"
+            />
+            <p class="cvc-image">000</p>
+            <p class="number-image">0000 0000 0000 0000</p>
+            <p class="name-image">JANE APPLESEED</p>
+            <p class="expiration-image">
+              <span class="month-image">00</span>/<span class="year-image"
+                >00</span
+              >
+            </p>
+          </div>
+        </section>
+        <form action="#" class="card-form" onsubmit="returnToForm()">
+          <label for="cardholder-name" class="cardholder-name"
+            >CARDHOLDER NAME</label
+          >
+          <input
+            type="text"
+            id="cardholder-name"
+            name="cardholder-name"
+            placeholder="e.g. Jane Appleseed"
+            autocomplete="off"
+            required
+          />
+          <p class="error name-error-blank hidden">Can't be blank</p>
+          <label for="card-number" class="card-number">CARD NUMBER</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            placeholder="e.g. 1234 5678 9123 0000"
+            required
+          />
+          <p class="error cardnumber-error-blank hidden">Can't be blank</p>
+          <p class="error cardnumber-error-format hidden">
+            Wrong format, numbers only
+          </p>
+          <div class="row-title">
+            <label for="exp-month">EXP. DATE (MM/YY)</label>
+            <label for="cvc-number" class="cvc-display">CVC</label>
+          </div>
+          <div class="row-input">
+            <input
+              type="text"
+              id="exp-month"
+              name="exp-month"
+              placeholder="MM"
+              required
+            />
+            <input
+              type="text"
+              id="exp-year"
+              name="exp-year"
+              placeholder="YY"
+              required
+            />
+            <input
+              type="text"
+              id="cvc-number"
+              name="cvc-number"
+              placeholder="e.g. 123"
+              required
+            />
+          </div>
+          <p class="error exp-month-error-blank hidden">Can't be blank</p>
+          <p class="error exp-month-error-format hidden">
+            Wrong format, numbers only
+          </p>
+          <p class="error exp-year-error-blank hidden">Can't be blank</p>
+          <p class="error exp-year-error-format hidden">
+            Wrong format, numbers only
+          </p>
+          <p class="error cvc-error-blank hidden">Can't be blank</p>
+          <p class="error cvc-error-format hidden">
+            Wrong format, numbers only
+          </p>
+          <button class="submit-button" type="submit">Confirm</button>
+        </form>
+        <div class="submitted-form" style="display: none">
+          <img
+            class=""
+            icon-complete
+            src="images/icon-complete.svg"
+            alt="icon-complete"
+          />
+          <h1>THANK YOU!</h1>
+          <h3>We've added your card details</h3>
+          <button class="continue-button" type="submit">Continue</button>
+        </div>
+      </main>
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://www.frontendmentor.io/profile/KatrineNPedersen"
+            target="_blank"
+            >Katrine N Pedersen</a
+          >.
+        </div>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

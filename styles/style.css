@@ -1,0 +1,456 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 650px;
+  min-width: 375px;
+}
+body .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  min-height: 650px;
+}
+body .container main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 95%;
+  min-width: 375px;
+}
+body .container main #card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 250px;
+  min-height: 250px;
+  width: 100%;
+  background: url(../images/bg-main-mobile.png);
+}
+body .container main #card-image .card-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 375px;
+  height: 100%;
+}
+body .container main #card-image .card-display .bg-card-back {
+  position: absolute;
+  height: 67%;
+  width: 75%;
+  z-index: 2;
+  top: 30px;
+  right: 20px;
+}
+body .container main #card-image .card-display .bg-card-front {
+  position: absolute;
+  height: 67%;
+  width: 75%;
+  z-index: 3;
+  bottom: -42px;
+  left: 20px;
+}
+body .container main #card-image .card-display .card-logo {
+  position: absolute;
+  z-index: 5;
+  width: 60px;
+  bottom: 70px;
+  left: 40px;
+}
+body .container main #card-image .card-display .cvc-image {
+  position: absolute;
+  z-index: 5;
+  width: 60px;
+  bottom: 120px;
+  right: 15px;
+  font-size: 10px;
+  color: hsl(0, 0%, 100%);
+}
+body .container main #card-image .card-display .number-image {
+  position: absolute;
+  z-index: 5;
+  bottom: -8px;
+  left: 40px;
+  font-size: 18px;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 2px;
+}
+body .container main #card-image .card-display .name-image {
+  position: absolute;
+  z-index: 5;
+  bottom: -30px;
+  left: 40px;
+  font-size: 10px;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 1.5px;
+}
+body .container main #card-image .card-display .expiration-image {
+  position: absolute;
+  z-index: 5;
+  bottom: -30px;
+  right: 101px;
+  font-size: 10px;
+  color: hsl(0, 0%, 100%);
+}
+body .container main form,
+body .container main .submitted-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 85px;
+  text-align: left;
+  height: 50%;
+  max-height: 425px;
+  min-height: 297px;
+  width: 325px;
+  justify-content: space-between;
+  position: relative;
+}
+body .container main form input,
+body .container main .submitted-form input {
+  height: 40px;
+  text-indent: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid hsl(270, 3%, 87%);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+body .container main form input:focus,
+body .container main .submitted-form input:focus {
+  outline: 1px solid hsl(279, 6%, 55%);
+}
+body .container main form input::-moz-placeholder, body .container main .submitted-form input::-moz-placeholder {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  color: hsl(270, 3%, 87%);
+  letter-spacing: 1px;
+}
+body .container main form input::placeholder,
+body .container main .submitted-form input::placeholder {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  color: hsl(270, 3%, 87%);
+  letter-spacing: 1px;
+}
+body .container main form #cardholder-name,
+body .container main form #card-number,
+body .container main form .row-input,
+body .container main .submitted-form #cardholder-name,
+body .container main .submitted-form #card-number,
+body .container main .submitted-form .row-input {
+  width: 100%;
+}
+body .container main form .cardholder-name,
+body .container main form .card-number,
+body .container main form .row-title,
+body .container main .submitted-form .cardholder-name,
+body .container main .submitted-form .card-number,
+body .container main .submitted-form .row-title {
+  width: 100%;
+  color: hsl(278, 68%, 11%);
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: -5%;
+}
+body .container main form .row-title,
+body .container main .submitted-form .row-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+}
+body .container main form .row-title .cvc-display,
+body .container main .submitted-form .row-title .cvc-display {
+  padding-left: 25px;
+}
+body .container main form .row-input,
+body .container main .submitted-form .row-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .container main form .row-input #exp-month,
+body .container main .submitted-form .row-input #exp-month {
+  width: 20%;
+}
+body .container main form .row-input #exp-year,
+body .container main .submitted-form .row-input #exp-year {
+  width: 20%;
+}
+body .container main form .row-input #cvc-number,
+body .container main .submitted-form .row-input #cvc-number {
+  width: 50%;
+}
+body .container main form button,
+body .container main .submitted-form button {
+  width: 100%;
+  height: 50px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+body .container main form button:hover,
+body .container main .submitted-form button:hover {
+  opacity: 80%;
+}
+body .container main form .error,
+body .container main .submitted-form .error {
+  font-size: 9px;
+  color: hsl(0, 100%, 66%);
+}
+body .container main form .name-error-blank,
+body .container main .submitted-form .name-error-blank {
+  position: absolute;
+  left: 0%;
+  top: 19%;
+}
+body .container main form .cardnumber-error-blank,
+body .container main form .cardnumber-error-format,
+body .container main .submitted-form .cardnumber-error-blank,
+body .container main .submitted-form .cardnumber-error-format {
+  position: absolute;
+  left: 0%;
+  top: 47.5%;
+}
+body .container main form .exp-month-error-blank,
+body .container main form .exp-year-error-blank,
+body .container main form .exp-month-error-format,
+body .container main form .exp-year-error-format,
+body .container main .submitted-form .exp-month-error-blank,
+body .container main .submitted-form .exp-year-error-blank,
+body .container main .submitted-form .exp-month-error-format,
+body .container main .submitted-form .exp-year-error-format {
+  position: absolute;
+  left: 0%;
+  top: 76%;
+}
+body .container main form .cvc-error-blank,
+body .container main .submitted-form .cvc-error-blank {
+  position: absolute;
+  right: 30%;
+  top: 76%;
+}
+body .container main form .cvc-error-format,
+body .container main .submitted-form .cvc-error-format {
+  position: absolute;
+  right: 13%;
+  top: 75.5%;
+}
+body .container main .submitted-form {
+  height: 335px;
+  justify-content: flex-start;
+}
+body .container main .submitted-form h1 {
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 15px;
+  margin-top: 35px;
+}
+body .container main .submitted-form h3 {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 18px;
+  color: hsl(279, 6%, 55%);
+  letter-spacing: 1px;
+}
+
+footer {
+  padding-bottom: 10px;
+}
+footer .attribution {
+  font-size: 9px;
+  text-align: center;
+  color: hsl(279, 6%, 55%);
+  font-weight: 300;
+}
+footer .attribution a {
+  color: hsl(278, 68%, 11%);
+  text-decoration: none;
+}
+footer .attribution a:hover {
+  font-size: 11px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  body .container {
+    min-height: 0;
+    position: relative;
+  }
+  body .container main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: stretch;
+    width: 100vw;
+    height: 100vh;
+  }
+  body .container main #card-image {
+    width: 35%;
+    height: 100%;
+    background: url(../images/bg-main-desktop.png) no-repeat;
+    background-size: cover;
+  }
+  body .container main #card-image .card-display {
+    height: 350px;
+    width: 100%;
+    max-width: 500px;
+  }
+  body .container main #card-image .card-display .bg-card-back {
+    height: 225px;
+    width: 410px;
+    top: 200px;
+    right: -200px;
+  }
+  body .container main #card-image .card-display .bg-card-front {
+    height: 225px;
+    width: 410px;
+    top: -60px;
+    left: 200px;
+  }
+  body .container main #card-image .card-display .card-logo {
+    top: -30px;
+    left: 235px;
+    width: 70px;
+  }
+  body .container main #card-image .card-display .cvc-image {
+    bottom: 23px;
+    right: -190px;
+    font-size: 11px;
+  }
+  body .container main #card-image .card-display .number-image {
+    top: 50px;
+    left: 240px;
+    font-size: 25px;
+    letter-spacing: 3px;
+    width: 350px;
+  }
+  body .container main #card-image .card-display .name-image {
+    top: 115px;
+    left: 240px;
+    font-size: 11px;
+  }
+  body .container main #card-image .card-display .expiration-image {
+    top: 115px;
+    left: 537px;
+    font-size: 11px;
+  }
+  body .container main form,
+  body .container main .submitted-form {
+    width: 65%;
+    margin: 0;
+    height: 42%;
+  }
+  body .container main form #cardholder-name,
+  body .container main form #card-number,
+  body .container main form .row-input,
+  body .container main .submitted-form #cardholder-name,
+  body .container main .submitted-form #card-number,
+  body .container main .submitted-form .row-input {
+    width: 40%;
+  }
+  body .container main form .cardholder-name,
+  body .container main form .card-number,
+  body .container main form .row-title,
+  body .container main .submitted-form .cardholder-name,
+  body .container main .submitted-form .card-number,
+  body .container main .submitted-form .row-title {
+    width: 40%;
+    margin-bottom: -30px;
+    position: relative;
+  }
+  body .container main form .cardholder-name .cvc-display,
+  body .container main form .card-number .cvc-display,
+  body .container main form .row-title .cvc-display,
+  body .container main .submitted-form .cardholder-name .cvc-display,
+  body .container main .submitted-form .card-number .cvc-display,
+  body .container main .submitted-form .row-title .cvc-display {
+    position: absolute;
+    right: 44%;
+  }
+  body .container main form button,
+  body .container main .submitted-form button {
+    width: 40%;
+  }
+  body .container main form .error,
+  body .container main .submitted-form .error {
+    font-size: 10px;
+  }
+  body .container main form .name-error-blank,
+  body .container main .submitted-form .name-error-blank {
+    left: 30%;
+    top: 18%;
+    width: 150px;
+  }
+  body .container main form .cardnumber-error-blank,
+  body .container main form .cardnumber-error-format,
+  body .container main .submitted-form .cardnumber-error-blank,
+  body .container main .submitted-form .cardnumber-error-format {
+    width: 150px;
+    left: 30%;
+    top: 47%;
+  }
+  body .container main form .exp-month-error-blank,
+  body .container main form .exp-year-error-blank,
+  body .container main form .exp-month-error-format,
+  body .container main form .exp-year-error-format,
+  body .container main .submitted-form .exp-month-error-blank,
+  body .container main .submitted-form .exp-year-error-blank,
+  body .container main .submitted-form .exp-month-error-format,
+  body .container main .submitted-form .exp-year-error-format {
+    left: 30%;
+    top: 76%;
+    width: 150px;
+  }
+  body .container main form .cvc-error-blank,
+  body .container main form .cvc-error-format,
+  body .container main .submitted-form .cvc-error-blank,
+  body .container main .submitted-form .cvc-error-format {
+    left: 50%;
+    top: 76%;
+  }
+  body .container main .submitted-form {
+    justify-content: center;
+  }
+  body .container footer {
+    position: absolute;
+    bottom: 1%;
+    left: 35%;
+    width: 65%;
+  }
+}/*# sourceMappingURL=style.css.map */
